@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Belen's ACT Study Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">PreACT → ACT</div>
+  <h1 class="hero-title">Belen's<br>Study Plan</h1>
+  <div class="hero-meta">
+    <span>Jun 16 – Aug 8</span><span class="dot">·</span>
+    <span>3× / week</span><span class="dot">·</span>
+    <span>8 weeks</span>
+  </div>
+  <div class="score-strip">
+    <div class="score-pill"><span class="pill-val">16</span><span class="pill-label">Now</span></div>
+    <div class="arrow-icon">→</div>
+    <div class="score-pill pill-target"><span class="pill-val">20+</span><span class="pill-label">Goal</span></div>
+  </div>
+</header>
+
+<nav class="tab-nav" id="tab-nav">
+  <button class="tab-btn active" data-tab="getstarted">✦ Start Here</button>
+  <button class="tab-btn" data-tab="lessons">Lessons</button>
+  <button class="tab-btn" data-tab="practice">Practice</button>
+  <button class="tab-btn" data-tab="flashcards">Flashcards</button>
+  <button class="tab-btn" data-tab="schedule">Schedule</button>
+  <button class="tab-btn" data-tab="tracker">Tracker</button>
+</nav>
+
+<main class="main-content">
+
+<!-- ══════════════════════════════════════════════════════
+     GET STARTED TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel active" id="tab-getstarted">
+  <div class="gs-progress-wrap">
+    <div class="gs-progress-label">
+      <span id="gs-step-label">Step 1 of 8</span>
+      <span id="gs-step-name">Welcome</span>
+    </div>
+    <div class="gs-progress-track"><div class="gs-progress-fill" id="gs-progress-fill"></div></div>
+  </div>
+
+  <!-- Step 1: Welcome -->
+  <div class="gs-step active" id="gs-s1">
+    <div class="gs-emoji">👋</div>
+    <h2 class="gs-title">Hey Belen. Let's get you ready for the ACT.</h2>
+    <p class="gs-body">You just got your PreACT results. This walkthrough is going to tell you exactly what they mean, show you what to study, teach you the rules you need to know, and give you practice questions — all in one place.</p>
+    <p class="gs-body">Go through this once from start to finish. After that, use the <strong>Lessons</strong>, <strong>Practice</strong>, and <strong>Flashcards</strong> tabs every session.</p>
+    <div class="gs-callout">⏱ This walkthrough takes about 10 minutes. Do it now, then you'll know exactly what to do every day until August.</div>
+    <button class="btn-primary" onclick="gsNext()">Let's go →</button>
+  </div>
+
+  <!-- Step 2: Score reveal -->
+  <div class="gs-step" id="gs-s2">
+    <div class="gs-eyebrow">Step 1 — Your scores</div>
+    <h2 class="gs-title">Here's where you landed.</h2>
+    <p class="gs-body">Your PreACT composite was a <strong>16</strong>. That's the starting point, not the ceiling. Here's the full picture:</p>
+    <div class="score-reveal">
+      <div class="sr-row">
+        <span class="sr-subject">Reading</span>
+        <div class="sr-bar-wrap"><div class="sr-bar" data-w="60" style="background:#3B6D11"></div></div>
+        <span class="sr-num">21</span>
+        <span class="sr-tag t-good">Strongest</span>
+      </div>
+      <div class="sr-row">
+        <span class="sr-subject">Math</span>
+        <div class="sr-bar-wrap"><div class="sr-bar" data-w="54" style="background:#E8A820"></div></div>
+        <span class="sr-num">19</span>
+        <span class="sr-tag t-mid">Room to grow</span>
+      </div>
+      <div class="sr-row">
+        <span class="sr-subject">Science</span>
+        <div class="sr-bar-wrap"><div class="sr-bar" data-w="40" style="background:#E8541A"></div></div>
+        <span class="sr-num">14</span>
+        <span class="sr-tag t-bad">Needs work</span>
+      </div>
+      <div class="sr-row">
+        <span class="sr-subject">English</span>
+        <div class="sr-bar-wrap"><div class="sr-bar" data-w="26" style="background:#A32D2D"></div></div>
+        <span class="sr-num">09</span>
+        <span class="sr-tag t-urgent">Priority #1</span>
+      </div>
+    </div>
+    <div class="gs-callout">English is your biggest opportunity. 27% correct means lots of points are just sitting there, ready to be claimed with the right practice.</div>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" onclick="gsNext()">Got it →</button>
+    </div>
+  </div>
+
+  <!-- Step 3: What the ACT actually tests -->
+  <div class="gs-step" id="gs-s3">
+    <div class="gs-eyebrow">Step 2 — What the test actually is</div>
+    <h2 class="gs-title">The ACT tests the same stuff every single time.</h2>
+    <p class="gs-body">This is great news. The test is predictable. Once you learn the rules it tests, you'll recognize them over and over again.</p>
+    <div class="subject-breakdown">
+      <div class="sb-card">
+        <div class="sb-head" style="color:#A32D2D">English <span>45 min · 75 questions</span></div>
+        <ul class="sb-list">
+          <li><strong>Conventions (52%):</strong> Commas, verb tenses, sentence structure, pronouns</li>
+          <li><strong>Knowledge of Language (15%):</strong> Transition words, precise word choice</li>
+          <li><strong>Production of Writing (33%):</strong> Editing for clarity, organization, relevance</li>
+        </ul>
+        <div class="sb-tip">💡 More than half the English score is pure grammar rules. Learn the rules = points.</div>
+      </div>
+      <div class="sb-card">
+        <div class="sb-head" style="color:#E8541A">Science <span>35 min · 40 questions</span></div>
+        <ul class="sb-list">
+          <li><strong>Interpretation of Data (40-50%):</strong> Read graphs, tables, and charts</li>
+          <li><strong>Scientific Investigation (20-30%):</strong> Understand how experiments are designed</li>
+          <li><strong>Evaluation of Models (25-35%):</strong> Decide what evidence supports or refutes a claim</li>
+        </ul>
+        <div class="sb-tip">💡 You don't need to memorize science facts. You need to read carefully and think logically.</div>
+      </div>
+      <div class="sb-card">
+        <div class="sb-head" style="color:#E8A820">Math <span>60 min · 60 questions</span></div>
+        <ul class="sb-list">
+          <li><strong>Your strong areas:</strong> Algebra (80%), Number & Quantity (67%), Geometry (60%)</li>
+          <li><strong>Weak spots:</strong> Functions (20%), Statistics & Probability (33%)</li>
+        </ul>
+        <div class="sb-tip">💡 Don't abandon your strong areas — just add Functions and Stats to your rotation.</div>
+      </div>
+      <div class="sb-card">
+        <div class="sb-head" style="color:#3B6D11">Reading <span>35 min · 40 questions</span></div>
+        <ul class="sb-list">
+          <li>Your best subject at 21 — keep it sharp by reading one passage per session</li>
+          <li>Focus on Key Ideas & Details and Integration of Knowledge</li>
+        </ul>
+        <div class="sb-tip">💡 Maintenance mode. Don't let it slip, but invest most energy elsewhere.</div>
+      </div>
+    </div>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" onclick="gsNext()">Next →</button>
+    </div>
+  </div>
+
+  <!-- Step 4: Priority list -->
+  <div class="gs-step" id="gs-s4">
+    <div class="gs-eyebrow">Step 3 — Your game plan</div>
+    <h2 class="gs-title">Here's what to fix and in what order.</h2>
+    <p class="gs-body">Don't try to fix everything at once. Work down this list in order — the top items move your score the most.</p>
+    <div class="priority-list">
+      <div class="pl-item pl-high">
+        <div class="pl-rank">#1</div>
+        <div class="pl-content">
+          <div class="pl-title">English — Conventions of Standard English</div>
+          <div class="pl-detail">17% correct · commas, verb tenses, sentence structure, pronouns</div>
+          <div class="pl-why">24 questions on the test. Mastering these rules alone can add 3–4 composite points.</div>
+        </div>
+        <div class="pl-pts">+3–4 pts</div>
+      </div>
+      <div class="pl-item pl-high">
+        <div class="pl-rank">#2</div>
+        <div class="pl-content">
+          <div class="pl-title">Science — Evaluation of Models</div>
+          <div class="pl-detail">10% correct · evidence, claims, experimental results</div>
+          <div class="pl-why">Only 1 right out of 10. This is a learnable skill — not about memorizing facts.</div>
+        </div>
+        <div class="pl-pts">+2 pts</div>
+      </div>
+      <div class="pl-item pl-high">
+        <div class="pl-rank">#3</div>
+        <div class="pl-content">
+          <div class="pl-title">English — Knowledge of Language</div>
+          <div class="pl-detail">29% correct · transition words, vague language, word choice</div>
+          <div class="pl-why">Transition words are a small memorizable list with big payoff.</div>
+        </div>
+        <div class="pl-pts">+1–2 pts</div>
+      </div>
+      <div class="pl-item pl-mid">
+        <div class="pl-rank">#4</div>
+        <div class="pl-content">
+          <div class="pl-title">Math — Functions</div>
+          <div class="pl-detail">20% correct · f(x) notation, graphs, real-world equations</div>
+          <div class="pl-why">Functions appear all over the math section. A solid foundation here pays dividends.</div>
+        </div>
+        <div class="pl-pts">+1 pt</div>
+      </div>
+      <div class="pl-item pl-mid">
+        <div class="pl-rank">#5</div>
+        <div class="pl-content">
+          <div class="pl-title">Science — Scientific Investigation</div>
+          <div class="pl-detail">33% correct · experiment design, variables, what makes a valid test</div>
+          <div class="pl-why">Learning the vocabulary (control, variable, hypothesis) makes most of these answerable.</div>
+        </div>
+        <div class="pl-pts">+1 pt</div>
+      </div>
+    </div>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" onclick="gsNext()">Next →</button>
+    </div>
+  </div>
+
+  <!-- Step 5: How to use this site -->
+  <div class="gs-step" id="gs-s5">
+    <div class="gs-eyebrow">Step 4 — How to use this website</div>
+    <h2 class="gs-title">Everything you need to study is right here.</h2>
+    <p class="gs-body">You don't need any other resource. Here's what each tab does:</p>
+    <div class="how-to-grid">
+      <div class="ht-card">
+        <div class="ht-icon">📖</div>
+        <div class="ht-title">Lessons</div>
+        <div class="ht-desc">Every grammar rule, science concept, and math topic you need — explained clearly with examples. Start here when you don't know something.</div>
+      </div>
+      <div class="ht-card">
+        <div class="ht-icon">✏️</div>
+        <div class="ht-title">Practice</div>
+        <div class="ht-desc">Real ACT-style questions sorted by topic. Answer them, get instant feedback, and see exactly why the right answer is right.</div>
+      </div>
+      <div class="ht-card">
+        <div class="ht-icon">🗂</div>
+        <div class="ht-title">Flashcards</div>
+        <div class="ht-desc">Flip through digital cards for every rule and concept. The same content you'd put on index cards — already made for you, always in your pocket.</div>
+      </div>
+      <div class="ht-card">
+        <div class="ht-icon">📅</div>
+        <div class="ht-title">Schedule</div>
+        <div class="ht-desc">Your full 8-week plan, week by week. Every session tells you exactly what to do and which Lesson or Practice set to use.</div>
+      </div>
+      <div class="ht-card">
+        <div class="ht-icon">✅</div>
+        <div class="ht-title">Tracker</div>
+        <div class="ht-desc">Check off sessions as you complete them. Watch 24 dots fill in over the summer. Progress you can see keeps you going.</div>
+      </div>
+    </div>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" onclick="gsNext()">Next →</button>
+    </div>
+  </div>
+
+  <!-- Step 6: Pick study days -->
+  <div class="gs-step" id="gs-s6">
+    <div class="gs-eyebrow">Step 5 — Your schedule</div>
+    <h2 class="gs-title">Pick your 3 study days.</h2>
+    <p class="gs-body">Choose 3 days you can commit to every week this summer. Non-consecutive days are best — your brain needs time to absorb what you studied.</p>
+    <div class="day-picker">
+      <button class="day-btn" data-day="Mon" onclick="toggleDay(this)">Mon</button>
+      <button class="day-btn" data-day="Tue" onclick="toggleDay(this)">Tue</button>
+      <button class="day-btn" data-day="Wed" onclick="toggleDay(this)">Wed</button>
+      <button class="day-btn" data-day="Thu" onclick="toggleDay(this)">Thu</button>
+      <button class="day-btn" data-day="Fri" onclick="toggleDay(this)">Fri</button>
+      <button class="day-btn" data-day="Sat" onclick="toggleDay(this)">Sat</button>
+      <button class="day-btn" data-day="Sun" onclick="toggleDay(this)">Sun</button>
+    </div>
+    <div class="day-feedback" id="day-feedback">Pick 3 days to continue.</div>
+    <div class="day-preview" id="day-preview" style="display:none">
+      <div class="dp-title">Week 1 preview</div>
+      <div id="dp-content"></div>
+    </div>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" id="days-next-btn" onclick="gsNext()" disabled>Save & continue →</button>
+    </div>
+  </div>
+
+  <!-- Step 7: First session setup -->
+  <div class="gs-step" id="gs-s7">
+    <div class="gs-eyebrow">Step 6 — Before your first session</div>
+    <h2 class="gs-title">Grab two things before you start.</h2>
+    <p class="gs-body">Check these off. Two physical items will make a big difference all summer.</p>
+    <div class="setup-list">
+      <label class="setup-item">
+        <input type="checkbox" class="setup-cb" onchange="updateSetup()">
+        <span class="setup-box"></span>
+        <div class="setup-content">
+          <div class="setup-title">A dedicated notebook — your Error Log</div>
+          <div class="setup-desc">Every wrong answer you get this summer goes in here: subject, what you picked, the right answer, and the rule you missed. By August this notebook becomes your personal cheat sheet. You'll see your own patterns and know exactly where to focus.</div>
+        </div>
+      </label>
+      <label class="setup-item">
+        <input type="checkbox" class="setup-cb" onchange="updateSetup()">
+        <span class="setup-box"></span>
+        <div class="setup-content">
+          <div class="setup-title">Index cards in 3 colors — yellow, blue, green</div>
+          <div class="setup-desc">Yellow = English rules, Blue = Math concepts, Green = Science vocabulary. Color-coding means you can drill one subject at a time by just grabbing that color stack. The Flashcards tab has all the content already — but making the physical cards by hand helps it stick.</div>
+        </div>
+      </label>
+    </div>
+    <div class="setup-progress" id="setup-progress">
+      <div class="sp-fill" id="sp-fill" style="width:0%"></div>
+    </div>
+    <p class="setup-label" id="setup-label">0 of 2 checked</p>
+    <div class="gs-btn-row">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" id="setup-next-btn" onclick="gsNext()" disabled>I have both →</button>
+    </div>
+  </div>
+
+  <!-- Step 8: You're ready -->
+  <div class="gs-step" id="gs-s8">
+    <div class="gs-emoji">🎯</div>
+    <div class="gs-eyebrow">You're all set</div>
+    <h2 class="gs-title">Here's your first session assignment.</h2>
+    <p class="gs-body">Start with the <strong>Lessons tab → English → Rule 1: Comma Rules</strong>. Read through it, write the key rules on yellow index cards, then go to <strong>Practice → English</strong> and do 10 questions.</p>
+    <div class="first-session-card">
+      <div class="fsc-header">Session 1 — Your to-do list</div>
+      <div class="fsc-item"><span class="fsc-num">1</span><span>Read Lessons → English → Comma Rules (10 min)</span></div>
+      <div class="fsc-item"><span class="fsc-num">2</span><span>Write the 5 comma rules on yellow cards (5 min)</span></div>
+      <div class="fsc-item"><span class="fsc-num">3</span><span>Do Practice → English Conventions (15 min)</span></div>
+      <div class="fsc-item"><span class="fsc-num">4</span><span>Log every wrong answer in your notebook (5 min)</span></div>
+      <div class="fsc-item"><span class="fsc-num">5</span><span>Check it off in your Tracker (1 min)</span></div>
+    </div>
+    <div class="gs-callout" style="margin-top:1rem">3 sessions a week × 8 weeks = 24 sessions. That's all it takes. Let's get started.</div>
+    <div class="gs-btn-row" style="flex-wrap:wrap">
+      <button class="btn-secondary" onclick="gsPrev()">← Back</button>
+      <button class="btn-primary" onclick="goToTab('lessons')">Go to Lessons →</button>
+      <button class="btn-outline" onclick="goToTab('tracker')">Open Tracker</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     LESSONS TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-lessons">
+  <div class="lessons-layout">
+    <aside class="lessons-nav" id="lessons-nav">
+      <div class="ln-group">
+        <div class="ln-subject">📝 English</div>
+        <button class="ln-btn active" onclick="showLesson('eng-commas', this)">Comma Rules</button>
+        <button class="ln-btn" onclick="showLesson('eng-sentences', this)">Sentence Structure</button>
+        <button class="ln-btn" onclick="showLesson('eng-verbs', this)">Verb Tenses</button>
+        <button class="ln-btn" onclick="showLesson('eng-pronouns', this)">Pronouns</button>
+        <button class="ln-btn" onclick="showLesson('eng-transitions', this)">Transition Words</button>
+        <button class="ln-btn" onclick="showLesson('eng-wordiness', this)">Wordiness & Clarity</button>
+      </div>
+      <div class="ln-group">
+        <div class="ln-subject">🔬 Science</div>
+        <button class="ln-btn" onclick="showLesson('sci-data', this)">Reading Data</button>
+        <button class="ln-btn" onclick="showLesson('sci-experiment', this)">Experiment Design</button>
+        <button class="ln-btn" onclick="showLesson('sci-models', this)">Evaluating Models</button>
+      </div>
+      <div class="ln-group">
+        <div class="ln-subject">📐 Math</div>
+        <button class="ln-btn" onclick="showLesson('math-functions', this)">Functions</button>
+        <button class="ln-btn" onclick="showLesson('math-stats', this)">Stats & Probability</button>
+      </div>
+    </aside>
+    <div class="lesson-content" id="lesson-content">
+
+      <!-- ENG: COMMA RULES -->
+      <div class="lesson active" id="lesson-eng-commas">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #1</div>
+        <h2 class="lesson-title">Comma Rules</h2>
+        <p class="lesson-intro">The ACT tests 6 specific comma rules over and over. Memorize these and you'll recognize the error instantly on test day.</p>
+        <div class="rule-card">
+          <div class="rule-num">Rule 1</div>
+          <div class="rule-title">Comma after an introductory phrase</div>
+          <div class="rule-body">When a sentence starts with a phrase before the main subject, put a comma after that phrase.</div>
+          <div class="rule-ex wrong">✗ After the storm the roads were flooded.</div>
+          <div class="rule-ex right">✓ After the storm<span class="comma-highlight">,</span> the roads were flooded.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 2</div>
+          <div class="rule-title">Comma + conjunction to join two complete sentences</div>
+          <div class="rule-body">Use a comma before <em>for, and, nor, but, or, yet, so</em> (FANBOYS) when joining two independent clauses.</div>
+          <div class="rule-ex wrong">✗ She studied hard but she still felt nervous.</div>
+          <div class="rule-ex right">✓ She studied hard<span class="comma-highlight">,</span> but she still felt nervous.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 3</div>
+          <div class="rule-title">NO comma splice — two sentences can't be joined by just a comma</div>
+          <div class="rule-body">A comma alone can NOT connect two complete sentences. Use a period, semicolon, or comma + conjunction.</div>
+          <div class="rule-ex wrong">✗ I finished the test<span class="comma-highlight">,</span> I felt relieved. ← WRONG</div>
+          <div class="rule-ex right">✓ I finished the test. I felt relieved.<br>✓ I finished the test; I felt relieved.<br>✓ I finished the test, and I felt relieved.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 4</div>
+          <div class="rule-title">Commas around extra information (nonessential clauses)</div>
+          <div class="rule-body">If you can remove the phrase without changing the sentence's main meaning, put commas around it. Test: take it out — does the sentence still make sense?</div>
+          <div class="rule-ex wrong">✗ My sister who loves music played the piano.</div>
+          <div class="rule-ex right">✓ My sister<span class="comma-highlight">,</span> who loves music<span class="comma-highlight">,</span> played the piano.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 5</div>
+          <div class="rule-title">Commas in a list of 3 or more items</div>
+          <div class="rule-body">Separate list items with commas. The comma before the last item (Oxford comma) is correct on the ACT.</div>
+          <div class="rule-ex right">✓ She bought apples<span class="comma-highlight">,</span> oranges<span class="comma-highlight">,</span> and bananas.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 6</div>
+          <div class="rule-title">NO comma between a subject and its verb</div>
+          <div class="rule-body">Never put a comma that separates the subject from what it's doing.</div>
+          <div class="rule-ex wrong">✗ The dog<span class="comma-highlight">,</span> barked loudly. ← WRONG</div>
+          <div class="rule-ex right">✓ The dog barked loudly.</div>
+        </div>
+        <div class="lesson-flashcard-cta">
+          <span>📇 Ready to make these into cards?</span>
+          <button class="btn-outline-sm" onclick="goToTab('flashcards')">Open Flashcards →</button>
+        </div>
+      </div>
+
+      <!-- ENG: SENTENCE STRUCTURE -->
+      <div class="lesson" id="lesson-eng-sentences">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #1</div>
+        <h2 class="lesson-title">Sentence Structure</h2>
+        <p class="lesson-intro">Sentence structure is the #1 most tested area in ACT English (20.5% of all questions). Learn to identify these errors and you're already ahead.</p>
+        <div class="rule-card">
+          <div class="rule-num">Concept 1</div>
+          <div class="rule-title">What makes a complete sentence?</div>
+          <div class="rule-body">A complete sentence needs: (1) a subject, (2) a verb, and (3) a complete thought. Missing any one of these = a fragment.</div>
+          <div class="rule-ex wrong">✗ Running through the park. ← No subject — fragment!</div>
+          <div class="rule-ex right">✓ She was running through the park.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Concept 2</div>
+          <div class="rule-title">Run-on sentences</div>
+          <div class="rule-body">Two complete sentences crammed together without proper punctuation. Fix with: (a) period, (b) semicolon, (c) comma + FANBOYS conjunction.</div>
+          <div class="rule-ex wrong">✗ The test was hard I studied for weeks. ← Run-on</div>
+          <div class="rule-ex right">✓ The test was hard. I studied for weeks.<br>✓ The test was hard; I studied for weeks.<br>✓ The test was hard, but I studied for weeks.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Concept 3</div>
+          <div class="rule-title">Semicolons — the period in disguise</div>
+          <div class="rule-body">A semicolon connects two complete sentences that are closely related. The rule: what's before AND after the semicolon must each be a complete sentence.</div>
+          <div class="rule-ex wrong">✗ She loves math; studying every night.</div>
+          <div class="rule-ex right">✓ She loves math; she studies every night.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Concept 4</div>
+          <div class="rule-title">Parallel structure — lists must match</div>
+          <div class="rule-body">When listing things, every item must be in the same grammatical form. If one item is a verb ending in -ing, they all should be.</div>
+          <div class="rule-ex wrong">✗ She likes running, to swim, and dance.</div>
+          <div class="rule-ex right">✓ She likes running, swimming, and dancing.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Concept 5</div>
+          <div class="rule-title">Colons — introducing a list or explanation</div>
+          <div class="rule-body">Use a colon after a complete sentence to introduce a list or explanation. What comes before the colon must be a complete sentence.</div>
+          <div class="rule-ex wrong">✗ My hobbies include: reading, hiking, and cooking.</div>
+          <div class="rule-ex right">✓ I have three hobbies: reading, hiking, and cooking.</div>
+        </div>
+        <div class="lesson-flashcard-cta">
+          <span>📇 Ready to make these into cards?</span>
+          <button class="btn-outline-sm" onclick="goToTab('flashcards')">Open Flashcards →</button>
+        </div>
+      </div>
+
+      <!-- ENG: VERB TENSES -->
+      <div class="lesson" id="lesson-eng-verbs">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #1</div>
+        <h2 class="lesson-title">Verb Tenses & Agreement</h2>
+        <p class="lesson-intro">Two verb rules dominate the ACT: tense consistency and subject-verb agreement. Learn to spot both.</p>
+        <div class="rule-card">
+          <div class="rule-num">Rule 1</div>
+          <div class="rule-title">Tense consistency — don't switch tenses</div>
+          <div class="rule-body">If a passage is written in the past tense, keep all verbs in the past tense. Switching from past to present in the middle of a sentence is almost always wrong on the ACT.</div>
+          <div class="rule-ex wrong">✗ She walked into the room and sits down.</div>
+          <div class="rule-ex right">✓ She walked into the room and sat down.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 2</div>
+          <div class="rule-title">Subject-verb agreement — singular with singular</div>
+          <div class="rule-body">A singular subject takes a singular verb. A plural subject takes a plural verb. The ACT hides the subject behind long phrases to trick you — always identify the REAL subject.</div>
+          <div class="rule-ex wrong">✗ The box of chocolates were left on the table.</div>
+          <div class="rule-ex right">✓ The box of chocolates <strong>was</strong> left on the table.<br><small>(Subject is "box" — singular, not "chocolates")</small></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 3</div>
+          <div class="rule-title">Tricky indefinite pronouns</div>
+          <div class="rule-body">These words are ALWAYS singular: <em>everyone, someone, anyone, nobody, each, either, neither, one</em>. They take singular verbs even though they feel plural.</div>
+          <div class="rule-ex wrong">✗ Everyone have finished their test.</div>
+          <div class="rule-ex right">✓ Everyone <strong>has</strong> finished their test.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Strategy</div>
+          <div class="rule-title">How to spot the real subject</div>
+          <div class="rule-body">Cross out everything between the subject and the verb. Whatever's left is what must agree.</div>
+          <div class="rule-ex right">The results of the experiment [that was conducted over many years] <strong>were</strong> surprising.<br><small>Cross out the bracket: "The results...were" ✓</small></div>
+        </div>
+      </div>
+
+      <!-- ENG: PRONOUNS -->
+      <div class="lesson" id="lesson-eng-pronouns">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #1</div>
+        <h2 class="lesson-title">Pronouns</h2>
+        <p class="lesson-intro">Pronoun questions test two things: does the pronoun match its antecedent in number, and is it the right form (I vs. me, who vs. whom)?</p>
+        <div class="rule-card">
+          <div class="rule-num">Rule 1</div>
+          <div class="rule-title">Pronoun-antecedent agreement</div>
+          <div class="rule-body">A pronoun must match the noun it replaces in number (singular/plural). If the noun is singular, the pronoun must be singular too.</div>
+          <div class="rule-ex wrong">✗ Each student must bring their own pencil.</div>
+          <div class="rule-ex right">✓ Each student must bring <strong>his or her</strong> own pencil.<br><small>("Each" is singular → singular pronoun)</small></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 2</div>
+          <div class="rule-title">Its vs. It's — the most common trap</div>
+          <div class="rule-body"><strong>Its</strong> = possession (belonging to it). <strong>It's</strong> = it is. Test: can you replace it with "it is"? If yes → it's. If no → its.</div>
+          <div class="rule-ex wrong">✗ The dog wagged it's tail.</div>
+          <div class="rule-ex right">✓ The dog wagged <strong>its</strong> tail.<br><small>("Its" shows the tail belongs to the dog)</small></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 3</div>
+          <div class="rule-title">Who vs. Whom</div>
+          <div class="rule-body">Who = subject (doing the action). Whom = object (receiving the action). Trick: replace with he/she (→ who) or him/her (→ whom).</div>
+          <div class="rule-ex right">✓ <strong>Who</strong> called? (He called → who)<br>✓ To <strong>whom</strong> did you speak? (I spoke to him → whom)</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 4</div>
+          <div class="rule-title">Ambiguous pronouns</div>
+          <div class="rule-body">A pronoun must have a clear, single antecedent. If "it" or "they" could refer to more than one thing, the sentence is ambiguous — that's an ACT error.</div>
+          <div class="rule-ex wrong">✗ When the book hit the shelf, it broke.<br><small>(Did the book break or the shelf?)</small></div>
+          <div class="rule-ex right">✓ When the book hit the shelf, <strong>the shelf</strong> broke.</div>
+        </div>
+      </div>
+
+      <!-- ENG: TRANSITIONS -->
+      <div class="lesson" id="lesson-eng-transitions">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #2</div>
+        <h2 class="lesson-title">Transition Words</h2>
+        <p class="lesson-intro">Transition questions ask you to pick the word that best connects two ideas. The key is understanding what relationship exists between the sentences.</p>
+        <div class="transition-grid">
+          <div class="tg-card">
+            <div class="tg-type">Contrast</div>
+            <div class="tg-words">however · although · but · yet · nevertheless · on the other hand · despite · while · even though</div>
+            <div class="tg-when">Use when: sentence 2 says something different or unexpected from sentence 1.</div>
+            <div class="rule-ex right">The weather was cold. <strong>However,</strong> we still went outside.</div>
+          </div>
+          <div class="tg-card">
+            <div class="tg-type">Addition</div>
+            <div class="tg-words">furthermore · in addition · moreover · also · additionally · as well</div>
+            <div class="tg-when">Use when: sentence 2 adds more of the same idea.</div>
+            <div class="rule-ex right">She studied every night. <strong>Furthermore,</strong> she hired a tutor.</div>
+          </div>
+          <div class="tg-card">
+            <div class="tg-type">Cause / Effect</div>
+            <div class="tg-words">therefore · consequently · as a result · thus · so · because · since</div>
+            <div class="tg-when">Use when: sentence 2 is the result or consequence of sentence 1.</div>
+            <div class="rule-ex right">She studied hard. <strong>As a result,</strong> she scored well.</div>
+          </div>
+          <div class="tg-card">
+            <div class="tg-type">Time / Sequence</div>
+            <div class="tg-words">first · then · next · finally · subsequently · previously · meanwhile · ultimately · afterward</div>
+            <div class="tg-when">Use when: describing a sequence of events in order.</div>
+            <div class="rule-ex right"><strong>First,</strong> she read the passage. <strong>Then,</strong> she answered the questions.</div>
+          </div>
+          <div class="tg-card">
+            <div class="tg-type">Example / Emphasis</div>
+            <div class="tg-words">for example · for instance · specifically · indeed · in fact · notably · in particular</div>
+            <div class="tg-when">Use when: sentence 2 gives a specific example of sentence 1's claim.</div>
+            <div class="rule-ex right">Many animals migrate. <strong>For instance,</strong> monarch butterflies travel thousands of miles.</div>
+          </div>
+        </div>
+        <div class="gs-callout" style="margin-top:1rem">Strategy: Before picking a transition word, ask yourself — are these two sentences agreeing, disagreeing, showing cause/effect, or in sequence? That narrows it to one category.</div>
+      </div>
+
+      <!-- ENG: WORDINESS -->
+      <div class="lesson" id="lesson-eng-wordiness">
+        <div class="lesson-tag" style="color:#A32D2D">English · Priority #2</div>
+        <h2 class="lesson-title">Wordiness & Clarity</h2>
+        <p class="lesson-intro">The ACT loves to test whether you can cut out unnecessary words. The shorter, cleaner option is almost always correct — as long as it preserves the meaning.</p>
+        <div class="rule-card">
+          <div class="rule-num">Rule 1</div>
+          <div class="rule-title">Shorter = usually better on the ACT</div>
+          <div class="rule-body">If two answers say the same thing but one is shorter, the shorter one is almost always correct. Redundancy (saying the same thing twice) is always wrong.</div>
+          <div class="rule-ex wrong">✗ She returned back to her home house where she lived.</div>
+          <div class="rule-ex right">✓ She returned home.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 2</div>
+          <div class="rule-title">Vague filler words to delete</div>
+          <div class="rule-body">Words like <em>really, very, quite, basically, somewhat, kind of, sort of, actually</em> are usually fluff. The ACT will test your ability to cut them.</div>
+          <div class="rule-ex wrong">✗ The results were very quite significant.</div>
+          <div class="rule-ex right">✓ The results were significant.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 3</div>
+          <div class="rule-title">Redundant pairs</div>
+          <div class="rule-body">Never use two words that mean the same thing together. These are always wrong on the ACT.</div>
+          <div class="rule-ex wrong">✗ end result · final outcome · past history · future plans · advance forward · new innovation · basic fundamentals</div>
+          <div class="rule-ex right">✓ result · outcome · history · plans · advance · innovation · fundamentals</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 4</div>
+          <div class="rule-title">DELETE is a valid answer</div>
+          <div class="rule-body">When the ACT offers "DELETE the underlined portion" as a choice, it's often the correct one. If removing the underlined text leaves a perfectly good sentence, delete it.</div>
+          <div class="rule-ex right">If deleting it doesn't change the meaning or break the grammar → delete it.</div>
+        </div>
+      </div>
+
+      <!-- SCI: DATA -->
+      <div class="lesson" id="lesson-sci-data">
+        <div class="lesson-tag" style="color:#E8541A">Science · Priority #2</div>
+        <h2 class="lesson-title">Reading Data — Graphs, Tables & Charts</h2>
+        <p class="lesson-intro">40–50% of ACT Science is just reading data correctly. These questions don't require science knowledge — they require careful reading.</p>
+        <div class="rule-card">
+          <div class="rule-num">Step 1</div>
+          <div class="rule-title">Always read the axes first</div>
+          <div class="rule-body">Before looking at the data, identify: What does the x-axis represent? What does the y-axis represent? What are the units? This takes 10 seconds and prevents misreading the whole graph.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Step 2</div>
+          <div class="rule-title">Identify the trend</div>
+          <div class="rule-body">Ask: as x increases, does y increase, decrease, or stay the same? Is the relationship linear (straight line) or curved? Does it level off at some point?</div>
+          <div class="rule-ex right">📈 As temperature increases, reaction rate increases → positive trend<br>📉 As altitude increases, air pressure decreases → negative trend</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Step 3</div>
+          <div class="rule-title">Reading tables</div>
+          <div class="rule-body">Find the row and column the question asks about. Then read the value at their intersection. Don't guess based on memory — always look at the table.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Step 4</div>
+          <div class="rule-title">Comparing multiple lines/sets</div>
+          <div class="rule-body">When a graph has multiple lines (e.g., Trial 1, Trial 2, Trial 3), the question often asks you to compare them. Look at the legend first, then trace each line separately.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Strategy</div>
+          <div class="rule-title">The answer is always in the passage</div>
+          <div class="rule-body">ACT Science is an open-book test in a way — the answer to every data question is somewhere in the graphs, tables, or text. Never answer from outside knowledge alone. Find the evidence.</div>
+        </div>
+      </div>
+
+      <!-- SCI: EXPERIMENT -->
+      <div class="lesson" id="lesson-sci-experiment">
+        <div class="lesson-tag" style="color:#E8541A">Science · Priority #2</div>
+        <h2 class="lesson-title">Experiment Design — Scientific Investigation</h2>
+        <p class="lesson-intro">These questions ask you to understand HOW an experiment was set up and WHY. Learn these 8 terms cold.</p>
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="vocab-term">Hypothesis</div>
+            <div class="vocab-def">A testable prediction made before the experiment. Usually "If [condition], then [outcome] because [reason]."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Independent Variable</div>
+            <div class="vocab-def">The thing the scientist <strong>intentionally changes</strong> in an experiment. There's usually only one. It goes on the x-axis.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Dependent Variable</div>
+            <div class="vocab-def">The thing the scientist <strong>measures as a result</strong>. It changes because of the independent variable. It goes on the y-axis.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Control Group</div>
+            <div class="vocab-def">The group where <strong>nothing is changed</strong> — the baseline for comparison. All other groups are compared to the control.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Constant</div>
+            <div class="vocab-def">Everything in the experiment that is <strong>kept the same</strong> across all groups, so you know any differences are caused by the independent variable.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Sample Size</div>
+            <div class="vocab-def">How many subjects/trials. Larger sample size = more reliable results. ACT often asks: "How would increasing sample size affect the results?"</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Valid Experiment</div>
+            <div class="vocab-def">An experiment that: (1) only changes one variable at a time, (2) has a control group, (3) uses a large enough sample, and (4) controls for all confounding variables.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-term">Conclusion</div>
+            <div class="vocab-def">What the data shows. A conclusion must be <strong>supported by the data</strong> in the experiment — not by outside knowledge or assumptions.</div>
+          </div>
+        </div>
+        <div class="gs-callout" style="margin-top:1rem">Quick tip: When asked "what would make this experiment better?" the answer is almost always: add a control group, increase sample size, or control for a variable that wasn't held constant.</div>
+      </div>
+
+      <!-- SCI: MODELS -->
+      <div class="lesson" id="lesson-sci-models">
+        <div class="lesson-tag" style="color:#E8541A">Science · Priority #1</div>
+        <h2 class="lesson-title">Evaluating Models & Claims</h2>
+        <p class="lesson-intro">This is your lowest-scoring area (10%). These questions ask: does this evidence support, weaken, or neither support nor weaken this claim?</p>
+        <div class="rule-card">
+          <div class="rule-num">The key question</div>
+          <div class="rule-title">What is the relationship between the evidence and the claim?</div>
+          <div class="rule-body">Every evaluation question boils down to: Does this new information make the claim more believable, less believable, or does it not affect the claim at all?</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Type 1</div>
+          <div class="rule-title">Supports the claim</div>
+          <div class="rule-body">New evidence SUPPORTS a claim when it is consistent with what the claim predicts. Ask: "If the claim is true, would we expect to see this evidence?" If yes → supports.</div>
+          <div class="rule-ex right">Claim: "More sunlight causes faster plant growth."<br>Evidence: Plants given 12 hours of light grew 20% taller than those given 6 hours.<br>→ This SUPPORTS the claim ✓</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Type 2</div>
+          <div class="rule-title">Weakens (refutes) the claim</div>
+          <div class="rule-body">Evidence WEAKENS a claim when it contradicts what the claim predicts. Ask: "If the claim is true, would this evidence be unexpected?" If yes → weakens.</div>
+          <div class="rule-ex right">Claim: "More sunlight causes faster plant growth."<br>Evidence: Plants in full sun for 16 hours showed stunted growth.<br>→ This WEAKENS the claim ✗</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Type 3</div>
+          <div class="rule-title">Neither supports nor weakens</div>
+          <div class="rule-body">Evidence is irrelevant if it measures something completely unrelated to what the claim is about. Don't force a connection that isn't there.</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Strategy</div>
+          <div class="rule-title">The 3-step approach</div>
+          <div class="rule-body">
+            1. Identify the claim (what is being argued)<br>
+            2. Identify the new evidence<br>
+            3. Ask: does the evidence match or contradict the claim?<br><br>
+            <strong>Never use outside knowledge</strong> — only what's in the passage.
+          </div>
+        </div>
+      </div>
+
+      <!-- MATH: FUNCTIONS -->
+      <div class="lesson" id="lesson-math-functions">
+        <div class="lesson-tag" style="color:#E8A820">Math · Priority #3</div>
+        <h2 class="lesson-title">Functions — f(x)</h2>
+        <p class="lesson-intro">You got 20% on functions. After this lesson, you'll understand exactly what f(x) means and how to use it.</p>
+        <div class="rule-card">
+          <div class="rule-num">What it means</div>
+          <div class="rule-title">f(x) = a machine that takes a number and spits out another</div>
+          <div class="rule-body">f(x) is just a rule. You put a number in (x), the function does something to it, and gives you a result. f(x) means "f of x" — the output of function f when the input is x.</div>
+          <div class="rule-ex right">f(x) = 2x + 3<br>f(4) = 2(4) + 3 = 8 + 3 = <strong>11</strong><br><small>Just replace every x with 4 and calculate.</small></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">How to evaluate</div>
+          <div class="rule-title">Plug and chug — always</div>
+          <div class="rule-body">Whatever is inside the parentheses replaces every x in the formula. That's all there is to it.</div>
+          <div class="rule-ex right">g(x) = x² − 5<br>g(3) = (3)² − 5 = 9 − 5 = <strong>4</strong><br>g(−2) = (−2)² − 5 = 4 − 5 = <strong>−1</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Composite functions</div>
+          <div class="rule-title">f(g(x)) — functions inside functions</div>
+          <div class="rule-body">Work from the inside out. Solve g(x) first, then plug that result into f.</div>
+          <div class="rule-ex right">f(x) = x + 1 and g(x) = 2x<br>f(g(3)) = f(2×3) = f(6) = 6 + 1 = <strong>7</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Reading graphs</div>
+          <div class="rule-title">f(x) on a graph — inputs and outputs</div>
+          <div class="rule-body">On a graph, the x-axis is the INPUT and the y-axis is the OUTPUT. "What is f(3)?" → find x = 3 on the x-axis, go straight up to the line, read the y-value.</div>
+          <div class="rule-ex right">If the graph passes through (3, 7) → f(3) = 7</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Domain & Range</div>
+          <div class="rule-title">What x values are allowed?</div>
+          <div class="rule-body"><strong>Domain</strong> = all allowed inputs (x values). <strong>Range</strong> = all possible outputs (y values). Watch for values that would cause division by zero or a square root of a negative number — those are excluded from the domain.</div>
+          <div class="rule-ex right">f(x) = 1/(x−2): x cannot equal 2 (would divide by zero)<br>Domain = all real numbers except x = 2</div>
+        </div>
+      </div>
+
+      <!-- MATH: STATS -->
+      <div class="lesson" id="lesson-math-stats">
+        <div class="lesson-tag" style="color:#E8A820">Math · Priority #4</div>
+        <h2 class="lesson-title">Statistics & Probability</h2>
+        <p class="lesson-intro">You got 33% here. These are very learnable — a handful of formulas cover 90% of what the ACT tests.</p>
+        <div class="rule-card">
+          <div class="rule-num">Mean</div>
+          <div class="rule-title">The average — most common ACT stats concept</div>
+          <div class="rule-body">Add all values, divide by how many there are.</div>
+          <div class="rule-ex right">Data: 10, 15, 20, 25<br>Mean = (10+15+20+25) ÷ 4 = 70 ÷ 4 = <strong>17.5</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Median</div>
+          <div class="rule-title">The middle value</div>
+          <div class="rule-body">Put the numbers in order. If odd count → middle number. If even count → average the two middle numbers.</div>
+          <div class="rule-ex right">Odd: 3, 5, <strong>7</strong>, 9, 11 → Median = 7<br>Even: 3, 5, <strong>7, 9</strong>, 11, 13 → Median = (7+9)÷2 = <strong>8</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Mode</div>
+          <div class="rule-title">The most frequent value</div>
+          <div class="rule-body">The number that appears most often. A data set can have multiple modes or no mode.</div>
+          <div class="rule-ex right">2, 3, 3, 5, 7, 3, 9 → Mode = <strong>3</strong> (appears 3 times)</div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Range</div>
+          <div class="rule-title">Spread of the data</div>
+          <div class="rule-body">Range = largest value − smallest value</div>
+          <div class="rule-ex right">2, 5, 8, 12, 19 → Range = 19 − 2 = <strong>17</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Probability</div>
+          <div class="rule-title">The formula you must know</div>
+          <div class="rule-body">P(event) = (favorable outcomes) ÷ (total possible outcomes). Always a number between 0 and 1 (or 0% to 100%).</div>
+          <div class="rule-ex right">Bag: 4 red, 6 blue, 5 green = 15 total<br>P(blue) = 6/15 = <strong>2/5</strong><br>P(NOT blue) = 9/15 = <strong>3/5</strong></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Two-event probability</div>
+          <div class="rule-title">AND means multiply</div>
+          <div class="rule-body">For two independent events both happening, multiply their individual probabilities.</div>
+          <div class="rule-ex right">P(heads) = 1/2. Two coin flips:<br>P(heads AND heads) = 1/2 × 1/2 = <strong>1/4</strong></div>
+        </div>
+      </div>
+
+    </div><!-- /lesson-content -->
+  </div><!-- /lessons-layout -->
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PRACTICE TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-practice">
+  <div class="practice-header">
+    <h2 class="practice-title">Practice Questions</h2>
+    <p class="practice-sub">Choose a topic, answer every question, and check your score. Log every wrong answer in your notebook.</p>
+    <div class="topic-selector">
+      <button class="topic-btn active" onclick="loadPractice('eng-conv', this)">English: Conventions</button>
+      <button class="topic-btn" onclick="loadPractice('eng-transitions', this)">English: Transitions</button>
+      <button class="topic-btn" onclick="loadPractice('sci-data', this)">Science: Data</button>
+      <button class="topic-btn" onclick="loadPractice('sci-models', this)">Science: Models</button>
+      <button class="topic-btn" onclick="loadPractice('math-functions', this)">Math: Functions</button>
+      <button class="topic-btn" onclick="loadPractice('math-stats', this)">Math: Stats</button>
+    </div>
+  </div>
+  <div class="quiz-container" id="quiz-container"></div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FLASHCARDS TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-flashcards">
+  <div class="fc-header">
+    <h2>Flashcard Packs</h2>
+    <p>Tap a card to flip it. Study one pack per session. When you know a card cold, swipe it aside mentally.</p>
+  </div>
+  <div class="pack-tabs">
+    <button class="pack-tab active" onclick="loadDeck('english', this)">📝 English</button>
+    <button class="pack-tab" onclick="loadDeck('science', this)">🔬 Science</button>
+    <button class="pack-tab" onclick="loadDeck('math', this)">📐 Math</button>
+  </div>
+  <div class="fc-deck-wrap">
+    <div class="fc-progress-wrap">
+      <span id="fc-count">Card 1 of 20</span>
+      <div class="fc-prog-track"><div class="fc-prog-fill" id="fc-prog-fill"></div></div>
+    </div>
+    <div class="flashcard" id="flashcard" onclick="flipCard()">
+      <div class="fc-inner" id="fc-inner">
+        <div class="fc-front" id="fc-front"></div>
+        <div class="fc-back" id="fc-back"></div>
+      </div>
+      <div class="fc-tap-hint" id="fc-hint">Tap to flip</div>
+    </div>
+    <div class="fc-controls">
+      <button class="btn-secondary" id="fc-prev" onclick="fcPrev()">← Prev</button>
+      <button class="btn-primary" id="fc-next" onclick="fcNext()">Next →</button>
+    </div>
+    <div class="fc-physical-tip">
+      <strong>Making physical cards?</strong> Write the front of each card on a yellow (English), blue (Math), or green (Science) index card. Write the answer on the back. Review your physical stack before every session.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SCHEDULE TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-schedule">
+  <div class="panel-intro"><p>Your full 8-week plan. Every session tells you exactly which Lesson and Practice set to use.</p></div>
+  <div id="schedule-content"></div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     TRACKER TAB
+══════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-tracker">
+  <div class="tracker-header">
+    <h2>Session Tracker</h2>
+    <p>Tap a dot to mark a session complete. 24 sessions between now and August 8.</p>
+    <div class="tracker-stat" id="tracker-stat">0 of 24 complete</div>
+  </div>
+  <div id="tracker-grid"></div>
+  <div class="tracker-legend">
+    <span><span class="tl-dot tl-done"></span> Done</span>
+    <span><span class="tl-dot tl-todo"></span> To do</span>
+  </div>
+  <div class="gs-callout" style="margin-top:1.5rem">Every time you finish a session, come back here and mark it off. Watching the dots fill in is part of what keeps you going.</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Built for Belen Rebollar · PreACT Oct 2025 · Target: ACT 20+</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
